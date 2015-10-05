@@ -7,6 +7,8 @@
  */
 package ar.edu.utn.frba.ia.grupo12.tp2;
 
+import java.util.Random;
+
 import main.java.ar.edu.utn.frba.ia.ag.Individuo;
 
 /**
@@ -22,10 +24,28 @@ public class ConjuntoCaracteristicas extends Individuo {
 	
 	@Override
 	public double aptitud() {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.getMateriasDuras() + 
+				this.getMateriasBlandas() +
+				this.getOfertaDemanda() + 
+				this.getDuracionPromedio() + 
+				this.getSatisfaccionEconomica();
 	}
-
+	
+	@Override
+	public Individuo generarRandom() {
+		Random r = new Random();
+		int Low = 1;
+		int High = 5;
+		ConjuntoCaracteristicas cc = new ConjuntoCaracteristicas();
+		cc.setMateriasDuras(r.nextInt(High-Low) + Low);
+		cc.setMateriasBlandas(r.nextInt(High-Low) + Low);
+		cc.setOfertaDemanda(r.nextInt(High-Low) + Low);
+		cc.setDuracionPromedio(r.nextInt(High-Low) + Low);
+		cc.setSatisfaccionEconomica(r.nextInt(High-Low) + Low);
+		
+		return cc;
+	}
+	
 	public Integer getMateriasDuras() {
 		return materiasDuras;
 	}
