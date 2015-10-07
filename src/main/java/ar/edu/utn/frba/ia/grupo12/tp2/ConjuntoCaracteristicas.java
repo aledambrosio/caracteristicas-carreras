@@ -36,33 +36,41 @@ public class ConjuntoCaracteristicas extends Individuo {
 			if (temp == 0) {
 				value += 5;
 			} else if (temp > 0) {
-				value += (temp * -6);
+				value += (temp * (-6));
 			} else {
-				value += (temp * -3);
+				value += (Math.abs(temp) * (-3));
 			}
 	
 			//Materias Blandas
-			temp = Math.abs(this.getMateriasBlandas() - ideal.getMateriasBlandas());
+			temp = this.getMateriasBlandas() - ideal.getMateriasBlandas();
 			if (temp == 0) {
 				value += 5;
 			} else {
-				value += (temp * -3);
+				value += (Math.abs(temp) * (-3));
 			}
 			
 			//Rel Oferta Demanda
-			temp = Math.abs(this.getOfertaDemanda() - ideal.getOfertaDemanda());
+			temp = this.getOfertaDemanda() - ideal.getOfertaDemanda();
 			if (temp >= 0) {
 				value += (temp * 8) + 5;
 			} else {
-				value += (temp * -9);
+				value += (Math.abs(temp) * (-9));
+			}
+			
+			//Duración promedio
+			temp = this.getDuracionPromedio() - ideal.getDuracionPromedio();
+			if (temp >= 0) {
+				value += (temp * 5) + 5;
+			} else {
+				value += (Math.abs(temp) * (-7));
 			}
 			
 			//Satisfac Econom.
-			temp = Math.abs(this.getSatisfaccionEconomica() - ideal.getSatisfaccionEconomica());
+			temp = this.getSatisfaccionEconomica() - ideal.getSatisfaccionEconomica();
 			if (temp >= 0) {
 				value += (temp * 10) + 5;
 			} else {
-				value += (temp * -10);
+				value += (Math.abs(temp) * (-10));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
