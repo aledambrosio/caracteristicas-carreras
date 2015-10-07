@@ -8,6 +8,7 @@ import main.java.ar.edu.utn.frba.ia.ag.Individuo;
 
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * 
@@ -99,7 +100,7 @@ public class ConjuntoCaracteristicas extends Individuo {
 	}
 	
 	public String toString() {
-		ToStringBuilder sb = new ToStringBuilder(this);
+		ToStringBuilder sb = new ToStringBuilder(this, ToStringStyle.SIMPLE_STYLE);
 		sb.append("Materias Duras", this.getMateriasDuras())
 		.append("Materias Blandas", this.getMateriasBlandas())
 		.append("Rel Oferta Demanda", this.getOfertaDemanda())
