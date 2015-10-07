@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src/main/java"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/utgenes"/>
-	<classpathentry kind="lib" path="lib/commons-lang3-3.1.jar"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-lang3-3.1.jar" sourcepath="/home/alejandro/.m2/repository/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1-sources.jar"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/utgenes"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
