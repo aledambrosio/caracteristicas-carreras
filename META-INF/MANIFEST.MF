@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: ar.edu.utn.frba.ia.grupo12.tp2.BuscarCaracteristicas
+Class-Path: lib/commons-lang3-3.1.jar utgenes.jar
