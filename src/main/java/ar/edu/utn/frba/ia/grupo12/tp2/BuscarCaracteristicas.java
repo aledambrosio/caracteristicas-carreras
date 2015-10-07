@@ -11,7 +11,6 @@ import main.java.ar.edu.utn.frba.ia.ag.cruzamiento.Simple;
 import main.java.ar.edu.utn.frba.ia.ag.mutacion.MutacionAdaptativaPorConvergencia;
 import main.java.ar.edu.utn.frba.ia.ag.mutacion.MutacionSimple;
 import main.java.ar.edu.utn.frba.ia.ag.mutacion.MutacionTemperaturaAscendente;
-import main.java.ar.edu.utn.frba.ia.ag.paro.AptitudMinimaPromedio;
 import main.java.ar.edu.utn.frba.ia.ag.paro.CantidadDeCiclos;
 import main.java.ar.edu.utn.frba.ia.ag.paro.TiempoTranscurrido;
 import main.java.ar.edu.utn.frba.ia.ag.seleccion.ControlSobreNumeroEsperado;
@@ -37,7 +36,7 @@ public class BuscarCaracteristicas {
 		Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).severe("*** FIN primer ejecución ***");
 		
 		//Segunda ejecución
-		c.setCriterioDeParo(new AptitudMinimaPromedio(70));
+		c.setCriterioDeParo(new CantidadDeCiclos(499L));
 		c.setMetodoDeSeleccion(new Ruleta());
 		c.setMutacion(new MutacionAdaptativaPorConvergencia());
 		c.setCruzamiento(new Simple());
