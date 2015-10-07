@@ -19,7 +19,7 @@ public class BuscarCaracteristicas {
 		c.setCriterioDeParo(new CantidadDeCiclos(499L));
 		c.setPoblacionInicial(poblacionInicial);
 		c.setMetodoDeSeleccion(new Ranking(Math.round((float)(poblacionInicial * 1.5))));
-		c.setMutacion(new MutacionSimple(0.3));
+		c.setMutacion(new MutacionSimple(0.2));
 		c.setCruzamiento(new BinomialAzar());
 		
 		AlgoritmoGenetico buscaCaracteristicas = new AlgoritmoGenetico(c, ConjuntoCaracteristicas.class);
